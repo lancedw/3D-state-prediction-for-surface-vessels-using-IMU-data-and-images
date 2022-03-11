@@ -12,10 +12,9 @@ https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/lear
 - Literatures: https://we.tl/t-jCiFFMFqzo
 
 # sources
-https://machinelearningmastery.com/how-to-load-visualize-and-explore-a-complex-multivariate-multistep-time-series-forecasting-dataset/
-
-https://pangkh98.medium.com/multi-step-multivariate-time-series-forecasting-using-lstm-92c6d22cd9c2
-
-https://www.youtube.com/watch?v=jR0phoeXjrc&ab_channel=VenelinValkov
-
-https://www.youtube.com/watch?v=ODEGJ_kh2aA&ab_channel=VenelinValkov
+- https://machinelearningmastery.com/how-to-load-visualize-and-explore-a-complex-multivariate-multistep-time-series-forecasting-dataset/
+- https://pangkh98.medium.com/multi-step-multivariate-time-series-forecasting-using-lstm-92c6d22cd9c2
+- LSTM btc predictor: https://www.youtube.com/watch?v=jR0phoeXjrc&ab_channel=VenelinValkov
+- LSTM btc predictor: https://www.youtube.com/watch?v=ODEGJ_kh2aA&ab_channel=VenelinValkov
+- PR correlation: https://arc.aiaa.org/doi/10.2514/3.62949
+- Dutch roll: https://en.wikipedia.org/wiki/Dutch_roll
