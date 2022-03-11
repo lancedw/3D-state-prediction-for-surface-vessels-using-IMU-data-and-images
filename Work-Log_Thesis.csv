@@ -1,0 +1,33 @@
+Date,Start time,End hour,Description
+1/10/2021,11:00,13:00,Introduction meeting with counsellor Tien-Thanh Nguyen
+8/10/2021,10:00,11:00,Preparation of the next meeting
+8/10/2021,11:00,12:00,Meeting with all promotors and counsellors to discuss the thesis and workflow
+15/10/2021,21:00,23:30,Making of the workplan
+16/10/2021,11:00,11:30,Making the English version of the workplan
+19/10/2021,13:00,13:15,Updating workplan based on received feedback
+20/10/2021,14:00,14:15,Updating workplan based on received feedback
+21/10/2021,14:00,18:00,Preparation of the next meeting + literature review and data research
+04/11/2021,13:00,18:00,reading papers + summarize them + prepare meeting
+05/11/2021,13:00,14:00,Bi weekly presentation
+10/11/2021,14:00,16:00,Nazotron paper study
+11/11/2021,14:00,16:00,Nazotron paper study
+18/11/2021,11:00,15:00,debugging Nazotron project + trying to get it to work
+18/11/2021,16:00,20:00,preparing meeting + reading additional papers + setting up python env
+19/11/2021,13:00,14:00,Bi weekly presentation
+01/12/2021,15:00,20:00,Debugging problems for nazotron project execution
+02/12/2021,15:00,17:00,Debugging problems for nazotron project execution
+03/12/2021,15:00,16:00,bi weekly meeting
+04/12/2021,15:00,18:30,setting up new project + youtube course on image CNN
+05/12/2021,10:00,12:00,Teams meeting with Nazar from nazotron project 
+07/12/2021,10:00,11:00,Testing new env and container for execution of the nazotron project
+07/12/2021,13:00,14:00,setting up ubuntu for development
+18/12/2021,11:00,13:00,preparing end of 1st semester presentation
+19/12/2021,11:00,13:00,preparing end of 1st semester presentation
+21/12/2021,14:00,22:00,preparing end of 1st semester presentation
+22/12/2021,11:00,11:40,midterm pres
+16/02/2022,13:00,17:10,installing ubuntu dual boot
+17/02/2022,15:00,18:45,trying to run the test.py in ubuntu
+17/02/2022,20:00,23:00,creating new project and learning pytorch
+18/02/2022,13:00,14:00,presentation
+06/03/2022,14:00,19:00,learning pytorch dl and creating LSTM pr model
+08/03/2022,15:00,20:00,dataloader
