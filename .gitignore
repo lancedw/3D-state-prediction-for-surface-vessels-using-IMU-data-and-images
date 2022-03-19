@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# data
+code/3dmodel/
+*.pkl
+
 # Distribution / packaging
 .Python
 build/
