@@ -1,6 +1,14 @@
 # Thesis
 3D state estimation and prediction for surface vessels using sensor fusion
 
+# Layout of repository
+The main folder in the repo contains:
+- worklog: where I log all my hours that I work on the thesis (necessary by thesis commitee)
+- Nazar's paper: so I can easily revisit his work to aid with our work
+- commands.txt: these are the commands used to run nazar's code but don't work for me
+- code/ : this folder contains all code; 
+-- d
+
 # Udemy course
 https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/learn/lecture/15027090#overview
 
