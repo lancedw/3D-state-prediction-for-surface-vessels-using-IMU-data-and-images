@@ -4,11 +4,10 @@
 # Layout of repository
 The main folder in the repo contains:
 - worklog: where I log all my hours that I work on the thesis (necessary by thesis commitee)
-- Nazar's paper: so I can easily revisit his work to aid with our work
 - commands.txt: these are the commands used to run nazar's code but don't work for me
 - environment.yml: conda environment for the notebooks
 - code/ : this folder contains all code; 
-  - 3dmodel/ : contains all data
+  - 3dmodel/ : contains all data: download here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
   - Nazotron/ : contains all code based on or directly from Nazotron
   - Notebooks/ : contains all notebooks written by me with the code for all the different models
   - results/ : contains all plot results from training and testing
