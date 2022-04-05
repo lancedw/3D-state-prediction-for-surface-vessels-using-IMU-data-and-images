@@ -43,4 +43,3 @@ https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/lear
 - PR correlation: https://arc.aiaa.org/doi/10.2514/3.62949
 - Dutch roll: https://en.wikipedia.org/wiki/Dutch_roll
 - Power consumption forecasting: https://machinelearningmastery.com/how-to-develop-lstm-models-for-multi-step-time-series-forecasting-of-household-power-consumption/
-- 
