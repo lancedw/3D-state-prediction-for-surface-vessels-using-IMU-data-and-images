@@ -65,3 +65,5 @@ Date,Start,End,Description
 09/04/2022,19:00,23:30,PR sequence model finally fixed + training + testing
 10/04/2022,21:00,23:30,PR sequence model testing and code clean up
 11/04/2022,01:00,03:00,PR sequence model testing and code clean up
+11/04/2022,11:00,13:00,PR sequence model testing with diff parameters
+11/04/2022,14:00,16:30,PR sequence model training with diff parameters
