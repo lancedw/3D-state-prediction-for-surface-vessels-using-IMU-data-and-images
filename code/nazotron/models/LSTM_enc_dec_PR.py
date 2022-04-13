@@ -6,15 +6,12 @@ class LSTM_encoder_decoder_PR(nn.Module):
     def __init__(self, cuda = True, encoder_input_size = 10, encoder_hidden_size = 300, decoder_hidden_size = 300,  output_size = 20):
         super(LSTM_encoder_decoder_PR, self).__init__()
         self.cuda_p = cuda
-
         self.encoder_hidden_size = encoder_hidden_size
         self.decoder_hidden_size = decoder_hidden_size
 
-        # (input size, hidden size, num_layers)
         self.encoder_lstm = nn.LSTM(encoder_input_size, encoder_hidden_size, batch_first=True)
         self.decoder_lstm = nn.LSTM(decoder_hidden_size, decoder_hidden_size, batch_first=True)
 
-        # (in_features, out_features)
         self.decoder_fc_1 = nn.Linear(decoder_hidden_size, int(decoder_hidden_size/2))
         self.decoder_fc_2 = nn.Linear(int(decoder_hidden_size/2), output_size)
 
@@ -33,11 +30,11 @@ class LSTM_encoder_decoder_PR(nn.Module):
 
 
     def initHiddenEncoder(self, n_batch):
-        return  torch.zeros(1, n_batch, self.encoder_hidden_size)
+        return  torch.zeros(1, n_batch  ,self.encoder_hidden_size)
 
 
     def initHiddenDecoder(self, n_batch):
-        return  torch.zeros(1, n_batch, self.decoder_hidden_size)
+        return  torch.zeros(1, n_batch  ,self.decoder_hidden_size)
 
 
     def forward(self, image_s, pr_s, use_n_im, predict_n_pr, encoder_hidden, decoder_hidden):

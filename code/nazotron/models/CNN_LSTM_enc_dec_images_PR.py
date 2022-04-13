@@ -5,23 +5,19 @@ import torch.nn.functional as F
 class CNN_LSTM_encoder_decoder_images_PR (nn.Module):
     def __init__(self, cuda = True, h_dim=2688, z_dim=1024, encoder_input_size = 4096, encoder_hidden_size = 300,  decoder_input_size = 300, decoder_hidden_size = 150, output_size = 20):
         super(CNN_LSTM_encoder_decoder_images_PR, self).__init__()
-        
         self.cuda_p = cuda
         self.encoder_hidden_size = encoder_hidden_size
         self.decoder_hidden_size = decoder_hidden_size
 
         self.encoder = nn.Sequential(
-
             nn.Conv2d(3, 8, kernel_size=5, stride=1, padding=2),
             # nn.BatchNorm2d(8),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size= 3, stride=2, padding=1),
-
             nn.Conv2d(8, 16, kernel_size=3, stride=1, padding=1),
             # nn.BatchNorm2d(16),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=3, stride=2, padding = 1),
-            
             nn.Conv2d(16, 32, kernel_size=3, stride=1, padding=1, bias=False),
             # nn.BatchNorm2d(32),
             nn.ReLU(),

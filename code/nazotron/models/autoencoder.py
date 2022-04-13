@@ -7,33 +7,27 @@ class AutoEncoder(nn.Module):
         super(AutoEncoder, self).__init__()
         self.cuda_p = cuda
         self.encoder = nn.Sequential(
-
             nn.Conv2d(3, 8, kernel_size=5, stride=1, padding=2),
             # nn.BatchNorm2d(8),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size= 3, stride=2, padding=1),
-
             nn.Conv2d(8, 16, kernel_size=3, stride=1, padding=1),
             # nn.BatchNorm2d(16),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=3, stride=2, padding = 1),
-
             nn.Conv2d(16, 32, kernel_size=3, stride=1, padding=1, bias=False),
             # nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=3, stride=2, padding = 1),
             # nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1, bias=False),
-
             # nn.BatchNorm2d(64),
             # nn.ReLU(),
             # nn.MaxPool2d(kernel_size=3, stride=2, padding = 1),
         )
-
         # self.fc0 = nn.Linear(h_dim, int(h_dim/2))
         # self.dropout0 = nn.Dropout(p=0.1)
         # self.fc00 = nn.Linear(int(h_dim/2), int(h_dim/2))
         # self.dropout00 = nn.Dropout(p=0.05)
-
         self.fc1 = nn.Linear(h_dim, z_dim)
         self.fc2 = nn.Linear(h_dim, z_dim)
         self.fc3 = nn.Linear(z_dim, h_dim)
