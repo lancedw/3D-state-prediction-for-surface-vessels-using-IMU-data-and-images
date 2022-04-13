@@ -67,3 +67,8 @@ Date,Start,End,Description
 11/04/2022,01:00,03:00,PR sequence model testing and code clean up
 11/04/2022,11:00,13:00,PR sequence model testing with diff parameters
 11/04/2022,14:00,16:30,PR sequence model training with diff parameters
+12/04/2022,10:00,12:30,Building new server pc for training + retraining
+12/04/2022,14:00,19:30,Building new server pc for training + retraining + cnn dataloading
+12/04/2022,21:00,23:30,cnn dataloading
+13/04/2022,10:30,13:30,cnn dataloading
+13/04/2022,15:30,19:30,cnn dataloading + model development + training loop
