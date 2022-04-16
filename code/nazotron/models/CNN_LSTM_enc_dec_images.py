@@ -15,10 +15,12 @@ class CNN_LSTM_encoder_decoder_images(nn.Module):
             # nn.BatchNorm2d(8),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size= 3, stride=2, padding=1),
+
             nn.Conv2d(8, 16, kernel_size=3, stride=1, padding=1),
             # nn.BatchNorm2d(16),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=3, stride=2, padding = 1),
+            
             nn.Conv2d(16, 32, kernel_size=3, stride=1, padding=1, bias=False),
             # nn.BatchNorm2d(32),
             nn.ReLU(),
