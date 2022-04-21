@@ -8,7 +8,7 @@ __pycache__/
 
 # data
 code/3dmodel/
-code/notebooks/model_states/
+code/notebooks/model_states/cnn/
 *.pkl
 
 # Distribution / packaging
