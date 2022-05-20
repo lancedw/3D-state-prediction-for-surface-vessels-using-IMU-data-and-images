@@ -1,7 +1,7 @@
-from LSTM_PR_single_step import SingleStepPredictor
-from LSTM_PR_sequence import LSTM_seq2seq
-from CNN_linear_img_to_PR import CNN_linear
-from CNN_LSTM_img_to_PR import CNN_LSTM_seq2seq
+from models.LSTM_PR_single_step import SingleStepPredictor
+from models.LSTM_PR_sequence import LSTM_seq2seq
+from models.CNN_linear_img_to_PR import CNN_linear
+from models.CNN_LSTM_img_to_PR import CNN_LSTM_seq2seq
 
 class ModelProvider():
     @staticmethod

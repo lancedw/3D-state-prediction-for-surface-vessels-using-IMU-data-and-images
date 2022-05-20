@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import tqdm.notebook as tqdm
 from data_loaders.utils import Utilities
 
 class SequenceGenerator():
@@ -18,7 +17,8 @@ class SequenceGenerator():
         sequences= []
 
         # make sequences per episode, one sequence can only hold data of one and the same episode!
-        for n in tqdm(range(n_episodes)):
+        for n in range(n_episodes):
+            print(f"sequencing episode {n}...", end='\r')
             for l in range(episode_length-output_sequence_length-input_sequence_length+1):
 
                 i = l+(n*episode_length)
@@ -46,7 +46,8 @@ class SequenceGenerator():
         sequences= []
 
         # make sequences per episode, one sequence can only hold data of one and the same episode!
-        for n in tqdm(range(n_episodes)):
+        for n in range(n_episodes):
+            print(f"sequencing episode {n}...", end='\r')
             for l in range(episode_length-output_sequence_length-input_sequence_length+1):
 
                 i = l+(n*episode_length)
@@ -75,8 +76,8 @@ class SequenceGenerator():
         sequences= []
 
         # make sequences per episode, one sequence can only hold data of one and the same episode!
-        for n in tqdm(range(n_episodes)):
-
+        for n in range(n_episodes):
+            print(f"sequencing episode {n}...", end='\r')
             for l in range(episode_length-output_sequence_length-input_sequence_length+1):
                 
                 i = l+(n*episode_length)
