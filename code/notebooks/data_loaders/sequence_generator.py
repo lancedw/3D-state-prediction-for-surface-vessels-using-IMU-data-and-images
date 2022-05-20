@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import tqdm.notebook as tqdm
-from utilities import Utilities
+from data_loaders.utils import Utilities
 
 class SequenceGenerator():
 

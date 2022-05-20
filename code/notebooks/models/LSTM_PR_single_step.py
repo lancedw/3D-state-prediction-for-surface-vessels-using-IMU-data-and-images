@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch.nn.functional as F
 
-class PRPredictionModel(nn.Module):
+class SingleStepPredictor(nn.Module):
 
     # INPUT LAYER (2 features) --> LSTM 128 hidden --> LSTM 128 hidden --> Linear --> OUTPUT (2 features)
     def __init__(self, in_features, out_features, n_hidden=128, n_layers=2):
