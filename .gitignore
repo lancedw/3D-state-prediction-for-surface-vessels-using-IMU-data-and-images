@@ -8,7 +8,8 @@ __pycache__/
 *.so
 
 # data
-code/3dmodel/
+code/3dmodel/*
+!code/3dmodel/dotted_episode
 code/notebooks/model_states/cnn*
 *.pkl
 

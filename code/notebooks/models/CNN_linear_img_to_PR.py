@@ -45,7 +45,6 @@ class CNN_encoder(nn.Module):
         # x is of shape (batch, seq_lenth, channels, height, width)
         # iterate over the sequence and encode a feature vector for each image
         img_features = [self.cnn_encoder(x[:,i,:,:,:].squeeze(1)) for i in range(x.size(1))]
-        print(img_features[0].shape)
         
         # flatten feature vectors in img_features
         img_features = [img.reshape(batch_size, -1) for img in img_features]
