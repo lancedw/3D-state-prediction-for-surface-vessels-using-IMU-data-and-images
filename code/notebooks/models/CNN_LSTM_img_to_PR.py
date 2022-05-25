@@ -42,10 +42,10 @@ class LSTM_encoder(nn.Module):
 
         self.hidden_size = hidden_size
         self.num_layers = num_layers
-        self.input_size = input_size
+        self.input_size = input_size*4992
 
         self.encoder_lstm = nn.LSTM(
-            input_size=input_size, 
+            input_size=input_size*4992, 
             hidden_size=hidden_size, 
             num_layers=num_layers,
             batch_first=True,
@@ -62,7 +62,7 @@ class Decoder(nn.Module):
     def __init__(self, output_size, hidden_size=1024, num_layers=1):
         super(Decoder, self).__init__()
 
-        self.output_size = output_size
+        self.output_size = output_size*2
         self.hidden_size = hidden_size
         self.num_layers = num_layers
 
@@ -74,15 +74,14 @@ class Decoder(nn.Module):
         )
 
         self.decoder_fc_1 = nn.Linear(hidden_size, int(hidden_size/2))
-        self.decoder_fc_2 = nn.Linear(int(hidden_size/2), output_size)
+        self.decoder_fc_2 = nn.Linear(int(hidden_size/2), output_size*2)
 
     def forward(self, x_input, hidden):
-        outputs = F.relu(x_input)
 
-        outputs, hidden = self.decoder_lstm(outputs, hidden)
+        outputs, hidden = self.decoder_lstm(x_input, hidden)
 
-        outputs = F.relu(self.decoder_fc_1(outputs))
-        outputs = torch.tanh(self.decoder_fc_2(outputs))
+        outputs = self.decoder_fc_1(outputs)
+        outputs = self.decoder_fc_2(outputs)
 
         return outputs, hidden
 
@@ -110,6 +109,6 @@ class CNN_LSTM_seq2seq(nn.Module):
         output, decoder_hidden = self.decoder.forward(encoder_outputs, encoder_hidden)
 
         # reshape to (2, FRAMES_OUT) for two dimensional pitch and roll matrix
-        output = output.reshape(batch_size, 2, self.output_size/2)
+        output = output.reshape(batch_size, 2, self.output_size)
 
         return output
