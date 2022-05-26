@@ -29,10 +29,11 @@ class Utilities():
 
     # function to measure inference time on GPU
     @staticmethod
-    def inference_time(model, dummy_input, repetitions=10000):
-        device = torch.device("cuda")
-        model.to(device)
-        dummy_input.to(device)
+    def inference_time(model, dummy_input, repetitions=10000, cuda=True):
+        if(cuda):
+            device = torch.device("cuda")
+            model.to(device)
+            dummy_input.to(device)
         # INIT LOGGERS
         starter = torch.cuda.Event(enable_timing=True)
         ender = torch.cuda.Event(enable_timing=True)
