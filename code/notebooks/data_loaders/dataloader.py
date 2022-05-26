@@ -2,8 +2,8 @@ import cv2
 import json
 import numpy as np
 import pandas as pd
-from data_loaders.utils import Utilities
-from data_loaders.sequence_generator import SequenceGenerator
+from notebooks.data_loaders.utils import Utilities
+from notebooks.data_loaders.sequence_generator import SequenceGenerator
 
 import torch
 import torch.nn as nn

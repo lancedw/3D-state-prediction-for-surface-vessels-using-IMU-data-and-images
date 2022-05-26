@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from data_loaders.utils import Utilities
+from notebooks.data_loaders.utils import Utilities
 
 class SequenceGenerator():
 
