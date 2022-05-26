@@ -38,7 +38,7 @@ class Utilities():
         ender = torch.cuda.Event(enable_timing=True)
         timings = np.zeros((repetitions, 1))
         #GPU-WARM-UP
-        for _ in range(0):
+        for _ in range(1000):
             _ = model(dummy_input)
         # MEASURE PERFORMANCE
         with torch.no_grad():
