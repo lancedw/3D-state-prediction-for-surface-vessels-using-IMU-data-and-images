@@ -93,14 +93,14 @@ class Decoder(nn.Module):
 
 # Wrapper class for encoder and decoder
 class CNN_LSTM_seq2seq(nn.Module):
-    def __init__(self, encoder_input_size, output_size, hidden_size = 1024):
+    def __init__(self, encoder_input_size, output_size, channels = 3, hidden_size = 1024):
         super(CNN_LSTM_seq2seq, self).__init__()
 
         self.input_size = encoder_input_size
         self.output_size = output_size
         self.hidden_size = hidden_size
 
-        self.cnn_encoder = CNN_encoder()
+        self.cnn_encoder = CNN_encoder(channels=channels)
         self.lstm_encoder = LSTM_encoder(input_size = encoder_input_size, hidden_size = hidden_size)
         self.decoder = Decoder(output_size = output_size, hidden_size = hidden_size)
 

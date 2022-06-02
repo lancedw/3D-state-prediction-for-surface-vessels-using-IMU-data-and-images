@@ -1,8 +1,8 @@
-from models.LSTM_PR_single_step import SingleStepPredictor
-from models.LSTM_PR_sequence import LSTM_seq2seq
-from models.CNN_linear_img_to_PR import CNN_linear
-from models.CNN_LSTM_img_to_PR import CNN_LSTM_seq2seq as cnn_single
-from models.CNN_LSTM_img_PR_to_PR import CNN_LSTM_seq2seq as cnn_dual
+from notebooks.models.LSTM_PR_single_step import SingleStepPredictor
+from notebooks.models.LSTM_PR_sequence import LSTM_seq2seq
+from notebooks.models.CNN_linear_img_to_PR import CNN_linear
+from notebooks.models.CNN_LSTM_img_to_PR import CNN_LSTM_seq2seq as CNN_single
+from notebooks.models.CNN_LSTM_img_PR_to_PR import CNN_LSTM_seq2seq as CNN_dual
 
 class ModelProvider():
     @staticmethod
@@ -18,10 +18,10 @@ class ModelProvider():
         return CNN_linear(linear_input_size, output_size, channels)
 
     @staticmethod
-    def cnn_lstm_single(encoder_input_size, output_size, hidden_size = 1024):
-        return cnn_single(encoder_input_size, output_size, hidden_size)
+    def cnn_lstm_single(encoder_input_size, output_size, channels=3, hidden_size=1024):
+        return CNN_single(encoder_input_size, output_size, channels, hidden_size)
 
     @staticmethod
-    def cnn_lstm_dual(encoder_input_size, output_size, hidden_size = 1024):
-        return cnn_dual(encoder_input_size, output_size, hidden_size)
+    def cnn_lstm_dual(encoder_input_size, output_size, channels=3, hidden_size=1024):
+        return CNN_dual(encoder_input_size, output_size, channels, hidden_size)
         

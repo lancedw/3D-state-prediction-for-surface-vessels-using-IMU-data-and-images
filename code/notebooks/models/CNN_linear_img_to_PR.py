@@ -6,7 +6,7 @@ class CNN_encoder(nn.Module):
     def __init__(self, channels=3):
         super(CNN_encoder, self).__init__()
 
-        # outputs a tensor of shape (batch, out_channels, h/2/2/2, w/2/2/2)
+        # outputs a tensor of shape (batch, 32, h/2/2/2, w/2/2/2)
         self.cnn_encoder = nn.Sequential(
             nn.Conv2d(in_channels=channels, out_channels=8, kernel_size=5, padding=2),
             nn.ReLU(inplace=True),
@@ -20,24 +20,6 @@ class CNN_encoder(nn.Module):
             nn.ReLU(inplace=True),
             nn.MaxPool2d(kernel_size=2, stride=2),
         )
-
-        # self.conv1 = nn.Sequential(
-        #     nn.Conv2d(in_channels=channels, out_channels=8, kernel_size=5, padding=2),
-        #     nn.ReLU(inplace=True),
-        # )
-        # self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
-
-        # self.conv2 = nn.Sequential(
-        #     nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, padding=1),
-        #     nn.ReLU(inplace=True),
-        # )
-        # self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
-
-        # self.conv3 = nn.Sequential(
-        #     nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, padding=1),
-        #     nn.ReLU(inplace=True),
-        # )
-        # self.pool3 = nn.MaxPool2d(kernel_size=2, stride=2)
 
     def forward(self, x):
         batch_size = x.size(0)
@@ -56,40 +38,24 @@ class CNN_encoder(nn.Module):
         img_features = img_features.reshape(batch_size, -1).unsqueeze(1)
 
         return img_features
-    
-    def test(self, x):
-        x = self.conv1(x)
-        print("conv 1", x.shape)
-        x = self.pool1(x)
-        print("pool 1", x.shape)
-
-        x = self.conv2(x)
-        print("conv 2", x.shape)
-        x = self.pool2(x)
-        print("pool 2", x.shape)
-
-        x = self.conv3(x)
-        print("conv 3", x.shape)
-        x = self.pool3(x)
-        print("pool 3", x.shape)
 
 class Linear(nn.Module):
     def __init__(self, input_size, output_size):
         super(Linear, self).__init__()
 
-        self.input_size = input_size
+        self.input_size = input_size*2304
         self.output_size = output_size
 
-        self.fc1 = nn.Linear(input_size, int(input_size/2))
-        self.fc2 = nn.Linear(int(input_size/2), int(input_size/4))
-        self.fc3 = nn.Linear(int(input_size/4), output_size*2)
+        self.fc1 = nn.Linear(input_size*2304, 4096)
+        self.fc2 = nn.Linear(4096, 1024)
+        self.fc3 = nn.Linear(1024, output_size*2)
 
     def forward(self, x:torch.Tensor):
         x = self.fc1(x)
         x = self.fc2(x)
         x = self.fc3(x)
         
-        return x
+        return torch.tanh(x)
 
 class CNN_linear(nn.Module):
     def __init__(self, linear_input_size, output_size, channels=3):

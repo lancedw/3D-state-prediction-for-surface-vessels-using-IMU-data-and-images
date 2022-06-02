@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class CNN_encoder(nn.Module):
+
     def __init__(self, channels=3):
         super(CNN_encoder, self).__init__()
 
@@ -38,11 +39,8 @@ class CNN_encoder(nn.Module):
 # ENCODER
 class LSTM_encoder(nn.Module):
     def __init__(self, input_size, hidden_size=1024, num_layers=1):
+       
         super(LSTM_encoder, self).__init__()
-
-        self.hidden_size = hidden_size
-        self.num_layers = num_layers
-        self.input_size = input_size*4992
 
         self.encoder_lstm = nn.LSTM(
             input_size=input_size*4992, 
@@ -77,25 +75,26 @@ class Decoder(nn.Module):
         self.decoder_fc_2 = nn.Linear(int(hidden_size/2), output_size*2)
 
     def forward(self, x_input, hidden):
+        outputs = F.relu(x_input)
 
-        outputs, hidden = self.decoder_lstm(x_input, hidden)
+        outputs, hidden = self.decoder_lstm(outputs, hidden)
 
-        outputs = self.decoder_fc_1(outputs)
-        outputs = self.decoder_fc_2(outputs)
+        outputs = F.relu(self.decoder_fc_1(outputs))
+        outputs = torch.tanh(self.decoder_fc_2(outputs))
 
         return outputs, hidden
 
 
 # Wrapper class for encoder and decoder
 class CNN_LSTM_seq2seq(nn.Module):
-    def __init__(self, encoder_input_size, output_size, hidden_size = 1024):
+    def __init__(self, encoder_input_size, output_size, channels = 3, hidden_size = 1024):
         super(CNN_LSTM_seq2seq, self).__init__()
 
         self.input_size = encoder_input_size
         self.output_size = output_size
         self.hidden_size = hidden_size
 
-        self.cnn_encoder = CNN_encoder()
+        self.cnn_encoder = CNN_encoder(channels=channels)
         self.lstm_encoder = LSTM_encoder(input_size = encoder_input_size, hidden_size = hidden_size)
         self.decoder = Decoder(output_size = output_size, hidden_size = hidden_size)
 
