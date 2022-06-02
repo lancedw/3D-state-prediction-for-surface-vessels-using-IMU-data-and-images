@@ -104,7 +104,9 @@ class CNN_LSTM_seq2seq(nn.Module):
         self.lstm_encoder = LSTM_encoder(input_size = encoder_input_size, hidden_size = hidden_size)
         self.decoder = Decoder(output_size = output_size, hidden_size = hidden_size)
 
-    def forward(self, img_sequence, pr_sequence):
+    def forward(self, input):
+        img_sequence, pr_sequence = input
+
         batch_size = pr_sequence.size(0)
 
         features_vector = self.cnn_encoder(img_sequence, pr_sequence, batch_size)
