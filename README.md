@@ -24,7 +24,7 @@ In co-op. with the Royal Military Academy of Belgium
 |   │   ├── train_notebooks/           # contains one notebook for each model with all training and testing functionalities 
 |   │   ├── training_results/          # contains binary files with the training and validation MSE losses
 |   │   ├── pr_data_analysis.ipynb            # notebook containing all code for data analysis
-|   │   └── training_results_plots.ipynb      # notebook where all plots are made for training and validation loss
+└── └── └── training_results_plots.ipynb      # notebook where all plots are made for training and validation loss
 ``` 
 *simulation data can be downloaded here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
 
