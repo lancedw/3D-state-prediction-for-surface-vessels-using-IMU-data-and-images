@@ -1,4 +1,4 @@
-# Thesis
+# 2022 Thesis by Lance De Waele
 3D state estimation and prediction for surface vessels using IMU data and images
 
 # Layout of repository
