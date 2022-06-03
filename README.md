@@ -1,5 +1,12 @@
-# 2022 Thesis by Lance De Waele
-3D state estimation and prediction for surface vessels using IMU data and images
+# 3D state estimation and prediction for surface vessels using IMU data and images
+2022 Thesis by Lance De Waele 
+In co-op. with the Royal Military Academy of Belgium
+Supervisors: 
+> Prof. dr. ir. Hiep Luong
+> Prof. dr. ir. Jan Aelterman
+Counsellors: 
+> Ir. Tien-Thanh Nguyen (Royal Military Academy)
+> Dr. ir. Benoit Pairet (Royal Military Academy)
 
 # Layout of repository
 ```
