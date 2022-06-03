@@ -11,7 +11,7 @@
 │   ├── 3dmodel/                # contains simulation data*
 │   ├── results/                # contains saved graphical .png results from training and testing
 │   ├── Notebooks/              # source code
-|   │   ├── data_loaders/              # contains .py files with classes for all things related to data loading, sequencing and splitting
+|   │   ├── data_loaders/              # contains .py files with classes for data loading, sequencing and splitting
 |   │   ├── model_states/              # contains state files of the trained model parameters
 |   │   ├── models/                    # contains one .py file with the class for each model and a model_provider.py to easily access them
 |   │   ├── test_notebooks/            # contains one notebook for each model to quickly load and test models 
