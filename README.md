@@ -1,17 +1,23 @@
 # Thesis
-3D state estimation and prediction for surface vessels using sensor fusion
+3D state estimation and prediction for surface vessels using IMU data and images
 
 # Layout of repository
 The main folder in the repo contains:
-- worklog: where I log all my hours that I work on the thesis (necessary by thesis commitee)
-- commands.txt: these are the commands used to run nazar's code but don't work for me
-- environment.yml: conda environment for the notebooks
+- windows_env.yml: conda environment for the notebooks
 - code/ : this folder contains all code; 
   - 3dmodel/ : contains all data: download here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
-  - Nazotron/ : contains all code based on or directly from Nazotron
-  - Notebooks/ : contains all notebooks written by me with the code for all the different models
-  - results/ : contains all plot results from training and testing
-- Documentation/ : contains paper, presentations and guideline documents for my paper 
+  - Notebooks/ : 
+    - data_loaders/ : contains .py files with classes for all things related to data loading, sequencing and splitting
+    - model_states/ : contains state files for the trained models
+    - models/ : contains .py files with all models
+    - test_notebooks/ :
+    - test_results/ :
+    - train_notebooks/ :
+    - training_results/ : 
+    - pr_data_analysis.ipynb : notebook containing all code for data analysis
+    - training_results_plots.ipynb : notebook where all plots are made for training and validation loss
+  - results/ : contains all graphical results from training and testing
+- documentation/ : contains paper, presentations, worklogs, images, etc. 
 
 # Execution of the code
 Only the notebooks can be executed. To execute them, create a conda environment with environment.yml file (Windows) 
