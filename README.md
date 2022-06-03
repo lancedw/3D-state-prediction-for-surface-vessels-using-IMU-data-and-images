@@ -2,7 +2,16 @@
 3D state estimation and prediction for surface vessels using IMU data and images
 
 # Layout of repository
-The main folder in the repo contains:
+.
+├── ...
+├── docs                    # Documentation files (alternatively `doc`)
+│   ├── TOC.md              # Table of contents
+│   ├── faq.md              # Frequently asked questions
+│   ├── misc.md             # Miscellaneous information
+│   ├── usage.md            # Getting started guide
+│   └── ...                 # etc.
+└── ...
+
 - windows_env.yml: conda environment for the notebooks
 - code/ : this folder contains all code; 
   - 3dmodel/ : contains all data: download here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
