@@ -1,12 +1,8 @@
 # 3D state prediction for surface vessels using IMU data and images
 2022-2023 Thesis by Lance De Waele   
 
-**Supervisors**:  
-Prof. dr. ir. Hiep Luong  
-Prof. dr. ir. Jan Aelterman  
-**Counsellors**:  
-Ir. Tien-Thanh Nguyen (Royal Military Academy)  
-Dr. ir. Benoit Pairet (Royal Military Academy)  
+**Supervisors**:  Prof. dr. ir. Hiep Luong, Prof. dr. ir. Jan Aelterman  
+**Counsellors**:  Ir. Tien-Thanh Nguyen (Royal Military Academy), Dr. ir. Benoit Pairet (Royal Military Academy)  
 
 In co-op. with the Royal Military Academy of Belgium  
 
