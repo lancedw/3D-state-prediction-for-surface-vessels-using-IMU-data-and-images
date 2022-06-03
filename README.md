@@ -4,34 +4,24 @@
 # Layout of repository
 ```
 .
-├── code
-│   ├── faq.md              # Frequently asked questions
-│   ├── misc.md             # Miscellaneous information
-│   ├── usage.md            # Getting started guide
-│   └── ...                 # etc.
-├── docs                    # Documentation files (alternatively `doc`)
-│   ├── TOC.md              # Table of contents
-│   ├── faq.md              # Frequently asked questions
-│   ├── misc.md             # Miscellaneous information
-│   ├── usage.md            # Getting started guide
-│   └── ...                 # etc.
-└── ...
-```
-- windows_env.yml: conda environment for the notebooks
-- code/ : this folder contains all code; 
-  - 3dmodel/ : contains all data: download here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
-  - Notebooks/ : 
-    - data_loaders/ : contains .py files with classes for all things related to data loading, sequencing and splitting
-    - model_states/ : contains state files for the trained models
-    - models/ : contains .py files with all models
-    - test_notebooks/ :
-    - test_results/ :
-    - train_notebooks/ :
-    - training_results/ : 
-    - pr_data_analysis.ipynb : notebook containing all code for data analysis
-    - training_results_plots.ipynb : notebook where all plots are made for training and validation loss
-  - results/ : contains all graphical results from training and testing
-- documentation/ : contains paper, presentations, worklogs, images, etc. 
+├── code/
+│   ├── 3dmodel/            # contains all data (download here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ)
+│   ├── Notebooks/          # source code
+|   │   ├── data_loaders/       # contains .py files with classes for all things related to data loading, sequencing and splitting
+|   │   ├── model_states/       # contains state files for the trained models
+|   │   ├── models/             # contains .py files with all models
+|   │   ├── test_notebooks/     # contains
+|   │   ├── test_results/       # contains
+|   │   ├── train_notebooks/    # contains
+|   │   ├── training_results/   # contains
+|   │   ├── pr_data_analysis.ipynb    # notebook containing all code for data analysis
+|   │   └── training_results_plots.ipynb      # notebook where all plots are made for training and validation loss
+│   ├── results/            # contains all graphical results from training and testing
+├── documentation/      # Presentations, paper, worklog, workplan, images
+│   └── ...          
+└── windows_eny.yml     # Anaconda environment for execution on windows
+
+``` 
 
 # Execution of the code
 Only the notebooks can be executed. To execute them, create a conda environment with environment.yml file (Windows) 
