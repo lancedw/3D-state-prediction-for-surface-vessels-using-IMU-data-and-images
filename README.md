@@ -5,7 +5,7 @@
 ```
 .
 ├── windows_eny.yml     # Anaconda environment for execution on windows
-├── documentation/      # Presentations, paper, worklog, workplan, images
+├── docs/      		# Presentations, paper, worklog, workplan, images
 │   └── ...          
 ├── code/
 │   ├── 3dmodel/                # contains simulation data*
