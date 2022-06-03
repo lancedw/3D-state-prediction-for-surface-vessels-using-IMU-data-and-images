@@ -11,13 +11,13 @@
 │   ├── 3dmodel/                # contains simulation data*
 │   ├── results/                # contains saved graphical .png results from training and testing
 │   ├── Notebooks/              # source code
-|   │   ├── data_loaders/             # contains .py files with classes for all things related to data loading, sequencing and splitting
-|   │   ├── model_states/             # contains state files of the trained model parameters
-|   │   ├── models/                   # contains one .py file with the class for each model and a model_provider.py to easily access them
-|   │   ├── test_notebooks/           # contains one notebook for each model to quickly load and test models 
-|   │   ├── test_results/             # contains binary files with the MSEs of each model on all test sequences
-|   │   ├── train_notebooks/          # contains one notebook for each model with all training and testing functionalities 
-|   │   ├── training_results/         # contains binary files with the training and validation MSE losses
+|   │   ├── data_loaders/              # contains .py files with classes for all things related to data loading, sequencing and splitting
+|   │   ├── model_states/              # contains state files of the trained model parameters
+|   │   ├── models/                    # contains one .py file with the class for each model and a model_provider.py to easily access them
+|   │   ├── test_notebooks/            # contains one notebook for each model to quickly load and test models 
+|   │   ├── test_results/              # contains binary files with the MSEs of each model on all test sequences
+|   │   ├── train_notebooks/           # contains one notebook for each model with all training and testing functionalities 
+|   │   ├── training_results/          # contains binary files with the training and validation MSE losses
 |   │   ├── pr_data_analysis.ipynb            # notebook containing all code for data analysis
 |   │   └── training_results_plots.ipynb      # notebook where all plots are made for training and validation loss
 ``` 
