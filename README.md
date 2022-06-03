@@ -3,7 +3,7 @@
 
 **Supervisors**:  
 Prof. dr. ir. Hiep Luong  
-Prof. dr. ir. Jan Aelterman
+Prof. dr. ir. Jan Aelterman  
 **Counsellors**:  
 Ir. Tien-Thanh Nguyen (Royal Military Academy)  
 Dr. ir. Benoit Pairet (Royal Military Academy)  
