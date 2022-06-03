@@ -4,24 +4,24 @@
 # Layout of repository
 ```
 .
-├── code/
-│   ├── 3dmodel/            # contains all data (download here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ)
-│   ├── Notebooks/          # source code
-|   │   ├── data_loaders/       # contains .py files with classes for all things related to data loading, sequencing and splitting
-|   │   ├── model_states/       # contains state files for the trained models
-|   │   ├── models/             # contains .py files with all models
-|   │   ├── test_notebooks/     # contains
-|   │   ├── test_results/       # contains
-|   │   ├── train_notebooks/    # contains
-|   │   ├── training_results/   # contains
-|   │   ├── pr_data_analysis.ipynb    # notebook containing all code for data analysis
-|   │   └── training_results_plots.ipynb      # notebook where all plots are made for training and validation loss
-│   ├── results/            # contains all graphical results from training and testing
+├── windows_eny.yml     # Anaconda environment for execution on windows
 ├── documentation/      # Presentations, paper, worklog, workplan, images
 │   └── ...          
-└── windows_eny.yml     # Anaconda environment for execution on windows
-
+├── code/
+│   ├── 3dmodel/                # contains simulation data*
+│   ├── results/                # contains all graphical results from training and testing
+│   ├── Notebooks/              # source code
+|   │   ├── data_loaders/           # contains .py files with classes for all things related to data loading, sequencing and splitting
+|   │   ├── model_states/           # contains state files for the trained models
+|   │   ├── models/                 # contains .py files with all models
+|   │   ├── test_notebooks/         # contains
+|   │   ├── test_results/           # contains
+|   │   ├── train_notebooks/        # contains
+|   │   ├── training_results/       # contains
+|   │   ├── pr_data_analysis.ipynb            # notebook containing all code for data analysis
+|   │   └── training_results_plots.ipynb      # notebook where all plots are made for training and validation loss
 ``` 
+*simulation data can be downloaded here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
 
 # Execution of the code
 Only the notebooks can be executed. To execute them, create a conda environment with environment.yml file (Windows) 
