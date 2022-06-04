@@ -75,11 +75,10 @@ class Decoder(nn.Module):
         self.decoder_fc_2 = nn.Linear(int(hidden_size/2), output_size*2)
 
     def forward(self, x_input, hidden):
-        outputs = F.relu(x_input)
 
-        outputs, hidden = self.decoder_lstm(outputs, hidden)
+        outputs, hidden = self.decoder_lstm(x_input, hidden)
 
-        outputs = F.relu(self.decoder_fc_1(outputs))
+        outputs = self.decoder_fc_1(outputs)
         outputs = torch.tanh(self.decoder_fc_2(outputs))
 
         return outputs, hidden

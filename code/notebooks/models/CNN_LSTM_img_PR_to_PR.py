@@ -86,7 +86,7 @@ class Decoder(nn.Module):
         outputs, hidden = self.decoder_lstm(x_input, hidden)
 
         outputs = self.decoder_fc_1(outputs)
-        outputs = self.decoder_fc_2(outputs)
+        outputs = torch.tanh(self.decoder_fc_2(outputs))
 
         return outputs, hidden
 
