@@ -1,8 +1,8 @@
-from notebooks.models.LSTM_PR_single_step import SingleStepPredictor
-from notebooks.models.LSTM_PR_sequence import LSTM_seq2seq
-from notebooks.models.CNN_linear_img_to_PR import CNN_linear
-from notebooks.models.CNN_LSTM_img_to_PR import CNN_LSTM_seq2seq as CNN_single
-from notebooks.models.CNN_LSTM_img_PR_to_PR import CNN_LSTM_seq2seq as CNN_dual
+from notebooks.models.LSTM_single_step import SingleStepPredictor
+from notebooks.models.LSTM_enc_dec import LSTM_seq2seq
+from notebooks.models.CNN_sequential import CNN_linear
+from notebooks.models.CNN_LSTM_img import CNN_LSTM_seq2seq as CNN_single
+from notebooks.models.CNN_LSTM_img_PR import CNN_LSTM_seq2seq as CNN_dual
 
 class ModelProvider():
     @staticmethod

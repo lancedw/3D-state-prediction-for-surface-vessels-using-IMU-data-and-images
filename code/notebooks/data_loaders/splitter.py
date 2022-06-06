@@ -17,7 +17,12 @@ class DataSplitter():
         # test indices are the difference of all data indices and train indices
         test_indices = list(set(data_indices) - set(train_indices))
 
+        random.shuffle(train_indices)
+        random.shuffle(test_indices)
+
         print("Training size:", len(train_indices),"| Test size:", len(test_indices))
+        print(train_indices[:10])
+        print(test_indices[:10])
 
         train_sequences = []
         test_sequences = []
