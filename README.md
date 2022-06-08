@@ -17,11 +17,11 @@ In co-op. with the Royal Military Academy of Belgium
 │   ├── results/                # contains saved graphical .png results from training and testing
 │   ├── Notebooks/              # source code
 |   │   ├── data_loaders/              # contains .py files with classes for data loading, sequencing and splitting
-|   │   ├── model_states/              # contains state files of the trained model parameters
-|   │   ├── models/                    # contains one .py file with the class for each model and a model_provider.py to easily access them
-|   │   ├── test_notebooks/            # contains one notebook for each model to quickly load and test models 
+|   │   ├── model_states/              # contains binary files with state dictionaries for each trained model
+|   │   ├── models/                    # contains .py files for each model and a model_provider.py to easily access them
+|   │   ├── test_notebooks/            # contains notebooks for model testing 
 |   │   ├── test_results/              # contains binary files with the MSEs of each model on all test sequences
-|   │   ├── train_notebooks/           # contains one notebook for each model with all training and testing functionalities 
+|   │   ├── train_notebooks/           # contains one notebook for each model with complete training and testing functionalities 
 |   │   ├── training_results/          # contains binary files with the training and validation MSE losses
 |   │   ├── pr_data_analysis.ipynb            # notebook containing all code for data analysis
 └── └── └── train_results_plots.ipynb         # notebook where all plots are made for training and validation loss
@@ -29,11 +29,11 @@ In co-op. with the Royal Military Academy of Belgium
 *simulation data can be downloaded here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
 
 # Execution of the code
-Only the notebooks should be executed. To execute them, create a conda environment with .yml file (Windows) 
+To execute the notebooks, you can create a conda environment with the .yml file (Windows)
 
-Alternatively: run the first cell of any notebook and manually import all the packages that are used in the notebook. Python 3.8._ was used.
+Alternatively: run the first cell of any notebook and manually import all the packages that are used in the notebook. Python 3.8 was used.
 
-If GPU support is desired, Pytorch should be installed in the conda environment with the cuda toolkit extensions. To do this, follow the link to their website and select your OS and cuda version, and run the provided command in the environment's terminal. 
+If GPU support is desired, Pytorch should be installed in the conda environment with the cuda toolkit extensions. To do this, follow the link to the PyTorch website, select your OS and cuda version, and run the provided command in the environment's terminal. 
 https://pytorch.org/get-started/locally/
 (If your GPU only supports cuda 10.2, you will need to install a older version of pytorch)
 
