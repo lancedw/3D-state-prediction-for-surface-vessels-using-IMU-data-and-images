@@ -1,4 +1,4 @@
-# 3D state prediction for surface vessels using IMU data and images
+# 3D state prediction for surface vessels using IMU data and images - a deep learning approach
 2022-2023 Thesis by Lance De Waele   
 
 **Supervisors**:  Prof. dr. ir. Hiep Luong, Prof. dr. ir. Jan Aelterman  
