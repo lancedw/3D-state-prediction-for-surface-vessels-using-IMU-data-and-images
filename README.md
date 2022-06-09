@@ -13,10 +13,10 @@ In co-op. with the Royal Military Academy of Belgium
 ├── docs/      		    # Presentations, paper, worklog, workplan, images
 │   └── ...          
 ├── code/
-│   ├── 3dmodel/                # contains simulation data*
-│   ├── results/                # contains saved graphical .png results from training and testing
-│   ├── Notebooks/              # source code
-|   │   ├── data_loaders/              # contains .py files with classes for data loading, sequencing and splitting
+│   ├── 3dmodel/                # contains augmented simulation data*
+│   ├── results/                # contains all results for each model
+│   ├── Notebooks/              # contains source code
+|   │   ├── data_loaders/              # contains .py files with classes for data loading, sequencing, splitting, utility functions, etc.
 |   │   ├── model_states/              # contains binary files with state dictionaries for each trained model
 |   │   ├── models/                    # contains .py files for each model and a model_provider.py to easily access them
 |   │   ├── test_notebooks/            # contains notebooks for model testing 
@@ -26,12 +26,12 @@ In co-op. with the Royal Military Academy of Belgium
 |   │   ├── pr_data_analysis.ipynb            # notebook containing all code for data analysis
 └── └── └── train_results_plots.ipynb         # notebook where all plots are made for training and validation loss
 ``` 
-*simulation data can be downloaded here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
+*full simulation dataset can be downloaded here: https://drive.google.com/drive/folders/1RF8_wFfcIM0GIklXflPYv-tK3uaEWSSZ
 
 # Execution of the code
 To execute the notebooks, you can create a conda environment with the .yml file (Windows)
 
-Alternatively: run the first cell of any notebook and manually import all the packages that are used in the notebook. Python 3.8 was used.
+Alternatively: run the first cell of any training notebook and manually import all the packages that are used in the notebook in a Python 3.8 environment.
 
 If GPU support is desired, Pytorch should be installed in the conda environment with the cuda toolkit extensions. To do this, follow the link to the PyTorch website, select your OS and cuda version, and run the provided command in the environment's terminal. 
 https://pytorch.org/get-started/locally/
