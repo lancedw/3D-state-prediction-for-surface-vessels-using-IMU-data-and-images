@@ -10,6 +10,7 @@ __pycache__/
 # data
 code/3dmodel/*
 !code/3dmodel/dotted_episode
+!code/3dmodel/videos
 code/notebooks/model_states/cnn*
 *.pkl
 
